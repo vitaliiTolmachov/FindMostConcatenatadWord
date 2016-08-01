@@ -7,5 +7,7 @@ namespace IntegrityVisionTest
     {
         public TimeSpan ResultTime { get; set; }
         public IList<string> ResultArray { get; set; }
+	    public string FirstLongestWord { get; set; }
+		public string SecondLongestWord { get; set; }
     }
 }
