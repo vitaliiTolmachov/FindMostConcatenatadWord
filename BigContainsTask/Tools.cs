@@ -13,6 +13,8 @@ namespace IntegrityVisionTest
 
         public Result Run(IList<string> inputArray)
         {
+           string _longestWord;
+			string _secondLongestWord;
             _inputArray = inputArray.ToList();
             _inputArray.Reverse();
 
@@ -20,14 +22,42 @@ namespace IntegrityVisionTest
 
             InitializeLookupArray();
             SearchConcatenationWord();
-            _resultArr = _resultArr.OrderByDescending(x => x.Length).ToList();
-
+	        _resultArr = _resultArr.OrderByDescending(x => x.Length).Distinct().ToList();
+	        int _longestWordLength = _resultArr.First().Length;
+	        var _firstLogestWords = _resultArr.Where(word => word.Length == _longestWordLength).ToList();
+	        var _secondLongestWords = _resultArr.Where(word => word.Length == _longestWordLength-1).ToList();
+	        var builder = new StringBuilder();
+	        if (_firstLogestWords.Count>0)
+	        {
+				foreach (string word in _firstLogestWords) {
+					builder.Append(word).Append("; ");
+				}
+				_longestWord = builder.ToString();
+	        }
+	        else
+	        {
+		        _longestWord = _firstLogestWords.First();
+	        }
             timer.Stop();
+	        builder.Clear();
+			if (_secondLongestWords.Count > 0)
+			{
+				foreach (string word in _secondLongestWords)
+				{
+					builder.Append(word).Append("; ");
+				}
+				_secondLongestWord = builder.ToString();
+			} else
+			{
+				_secondLongestWord = _firstLogestWords.First();
+			}
 
             return new Result()
             {
                 ResultArray = _resultArr,
-                ResultTime = timer.Elapsed
+                ResultTime = timer.Elapsed,
+				FirstLongestWord = _longestWord,
+				SecondLongestWord = _secondLongestWord
             };
         }
 
