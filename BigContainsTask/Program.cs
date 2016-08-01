@@ -39,8 +39,8 @@ namespace IntegrityVisionTest
             Console.ForegroundColor = ConsoleColor.Green;
 
             Console.WriteLine("Total TIME:{0} miliseconds\n", result.ResultTime.TotalMilliseconds.ToString("#.##"));
-            Console.WriteLine("1. First word: {0}", result.ResultArray[0]);
-            Console.WriteLine("2. Second word: {0}", result.ResultArray[1]);
+            Console.WriteLine("1. First word: {0}", result.FirstLongestWord);
+            Console.WriteLine("2. Second word: {0}", result.SecondLongestWord);
             Console.WriteLine("3. Total count of concatenation words: {0}", result.ResultArray.Count);
 
             Console.ReadLine();
