@@ -1,0 +1,5 @@
+c:\Users\Vitalii Tolmachov\AppData\Roaming\Skype\My Skype Received Files\BigContainsTask\BigContainsTask\BigContainsTask\bin\Debug\BigContainsTask.exe
+c:\Users\Vitalii Tolmachov\AppData\Roaming\Skype\My Skype Received Files\BigContainsTask\BigContainsTask\BigContainsTask\bin\Debug\BigContainsTask.pdb
+c:\Users\Vitalii Tolmachov\AppData\Roaming\Skype\My Skype Received Files\BigContainsTask\BigContainsTask\BigContainsTask\obj\Debug\BigContainsTask.csprojResolveAssemblyReference.cache
+c:\Users\Vitalii Tolmachov\AppData\Roaming\Skype\My Skype Received Files\BigContainsTask\BigContainsTask\BigContainsTask\obj\Debug\BigContainsTask.exe
+c:\Users\Vitalii Tolmachov\AppData\Roaming\Skype\My Skype Received Files\BigContainsTask\BigContainsTask\BigContainsTask\obj\Debug\BigContainsTask.pdb
